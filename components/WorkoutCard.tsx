@@ -5,7 +5,7 @@ import { Workout } from "@/lib/types";
 export default function WorkoutCard({ workout }: { workout: Workout }) {
   return (
     <Link
-      href={`/workout/${workout.id}`}
+      href={`/workout/?id=${encodeURIComponent(workout.id)}`}
       className="group overflow-hidden rounded-2xl border border-line bg-panel transition hover:-translate-y-1 hover:border-zinc-500"
     >
       <div className="relative h-52 overflow-hidden bg-zinc-900">
