@@ -1,15 +1,15 @@
 import { notFound } from "next/navigation";
 import { Clock3, Flame, Star } from "lucide-react";
-import { getWorkout, getWorkouts } from "@/lib/api";
+import { getWorkout } from "@/lib/api";
 import DetailActions from "@/components/DetailActions";
 
+// GitHub Pages uses a static export, so every dynamic workout route
+// must be generated during the build.
 export async function generateStaticParams() {
-  try {
-    const workouts = await getWorkouts();
-    return workouts.map((workout) => ({ id: workout.id }));
-  } catch {
-    return [];
-  }
+  // The FitLog API currently provides 12 workouts.
+  return Array.from({ length: 12 }, (_, index) => ({
+    id: String(index + 1),
+  }));
 }
 
 export default async function WorkoutDetailsPage({
