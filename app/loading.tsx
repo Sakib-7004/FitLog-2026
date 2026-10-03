@@ -1,5 +1,4 @@
 import Loading from "@/components/Loading";
-
-export default function LoadingPage() {
-  return <Loading text="Loading FitLog…" />;
+export default function LoadingPage(){
+  return <Loading text="Loading FitLog…"/>;
 }
