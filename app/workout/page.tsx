@@ -68,15 +68,7 @@ export default function WorkoutDetailsPage(){
             ))}
           </div>
           <div className="mt-8 overflow-hidden rounded-2xl border border-line">
-            {[
-              ["EQUIPMENT",workout.equipment],
-              ["DIFFICULTY",workout.difficulty],
-              ["SETS",workout.sets],
-              ["REPS",workout.reps],
-              ["DURATION",`${workout.duration} min`],
-              ["CALORIES",`${workout.calories} kcal`],
-              ["RATING",workout.rating],
-            ].map(([label,value])=>(
+            {[["EQUIPMENT",workout.equipment],["DIFFICULTY",workout.difficulty],["SETS",workout.sets],["REPS",workout.reps],["DURATION",`${workout.duration} min`],["CALORIES",`${workout.calories} kcal`],["RATING",workout.rating],].map(([label,value])=>(
               <div key={String(label)} className="flex justify-between gap-4 border-b border-line px-4 py-3 text-sm last:border-b-0">
                 <span className="text-zinc-500">{label}</span>
                 <span className="text-right font-bold">{value}</span>
