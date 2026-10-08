@@ -1,4 +1,3 @@
-# FIT_LOG-2026
 # FitLog — Workout Library
 FitLog is a beginner-friendly Next.js workout library and daily workout planner built for the Programming Hero B14-A6 Fit Log assignment.
 
